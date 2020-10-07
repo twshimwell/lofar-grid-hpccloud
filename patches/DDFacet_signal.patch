@@ -1,0 +1,11 @@
+--- /opt/lofar/DDFacet/lib/python2.7/site-packages/DDFacet/Imager/ClassDeconvMachine.py	2020-10-07 12:17:33.000000000 +0000
++++ ClassDeconvMachine.py	2020-10-07 12:48:01.641675733 +0000
+@@ -103,7 +103,7 @@
+     global user_stopped
+     user_stopped = True
+ 
+-signal.signal(signal.SIGUSR1, handler=handle_user_stop_signal)
++signal.signal(signal.SIGUSR1, handle_user_stop_signal)
+ 
+ class ClassImagerDeconv():
+     def __init__(self, GD=None,
